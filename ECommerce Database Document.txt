@@ -1,0 +1,15 @@
+Database Project – Simple eCommerce System
+
+Database Structure
+
+My database consists of four separate tables: a Products table, Customers table, Orders table and OrderItems table. The Products table contains data on the various products that are available to order, such as their individual prices and stock quantity. The Customers table contains the personal details of every customer that has ordered an item e.g. first and last names, phone number, address etc. The Orders table contains records of when a customer last placed an order, while also displaying whether they currently have an active order at present. The OrderItems table contains records of the number of times a product has been ordered, while using both the Orders and Products tables as references.
+
+Relationships between Tables
+
+My OrderItems table is linked to both the Orders table and Products table, where the order_id field and product_id field are both used as foreign keys in the OrderItems table respectively. The Customers table is linked to the Orders table, where the customer_id field is used as a foreign key in the Customers table.
+
+Queries Performed
+
+The first query I ran was “CREATE DATABASE eCommerceDB;”, which allowed me to create a new database to store data in. I then ran the “USE eCommerceDB;” query, to make sure that the eCommerceDB database was the one currently in use before inputting any new data. The Products, Customers, Orders & OrderItems tables were all created using the “CREATE TABLE” query. The “INSERT INTO” query was then used to input sample data into all four of the aforementioned tables. The “SELECT * FROM” query was ran afterwards to double-check that my data had been inputted correctly.
+
+The “UPDATE” query was used to change the stock quantity for my first product to 70, based on the product id it was initially assigned. The “ON DELETE CASCADE” query was run for both the Orders and OrderItems tables, which allowed duplicate records to be deleted, helping to reduce data redundancy for both tables. The last queries I ran were “ORDER BY” queries, which allowed me to organise all four tables in ascending order, with respect to a field that has an integer data type. 
